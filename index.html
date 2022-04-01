@@ -5,41 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./lib/jquery.js"></script>
-    <style>
-        html,
-        body{
-            margin: 0;
-            padding: 0;
-            overflow: auto;
-        }
-        #angel {
-            position: absolute;
-        }
-    </style>
 </head>
 <body>
-    <img src="./angel.gif" id="angel" alt="">
-
-    <script>
-        $(function() {
-            var angel = $("#angel")
-            // 第一步：定义节流阀
-            var timer = null;
-   
-             // 绑定mousemove事件
-             $(document).on('mousemove', function(e) {
-                //  第三步：判断节流阀是否为空，如果不为空就return出去
-                 if(timer) {return}              
-                        
-        //    第二步：开启定时器
-            timer = setTimeout(function() {
-               angel.css('left',e.pageX + 'px').css('top', e.pageY + 'px')
-               console.log('ok');
-               timer = null
-            },16)
-          })
-        })
-    </script>
+    
 </body>
 </html>
